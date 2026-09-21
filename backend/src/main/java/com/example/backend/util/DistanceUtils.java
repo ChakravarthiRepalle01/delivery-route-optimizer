@@ -16,13 +16,11 @@ public class DistanceUtils {
     public static double[][] buildDistanceMatrix(List<Location> locations) {
         int n = locations.size();
         double[][] matrix = new double[n][n];
-
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 matrix[i][j] = calculateDistance(locations.get(i), locations.get(j));
             }
         }
-
         return matrix;
     }
 }
